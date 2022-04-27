@@ -19,7 +19,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - atendemais-volume-dbdata/var/lib/mysql
+      - atendemais-volume-dbdata:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=atendemais
       - MYSQL_ROOT_PASSWORD=root
