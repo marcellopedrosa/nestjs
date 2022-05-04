@@ -13,7 +13,7 @@ services:
 
   db:
     image: mariadb
-    container_name: your-container-name-db
+    container_name: your-app-name-db
     restart: always
     tty: true
     ports:
