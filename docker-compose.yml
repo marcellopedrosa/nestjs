@@ -4,7 +4,7 @@ services:
 
   app: 
     build: .
-    container_name: atendemais-backend-api
+    container_name: your-app-name
     entrypoint: ./.docker/entrypoint.sh
     ports:
       - 3000:3000
@@ -13,18 +13,18 @@ services:
 
   db:
     image: mariadb
-    container_name: antedemais-db
+    container_name: your-container-name-db
     restart: always
     tty: true
     ports:
       - 3306:3306
     volumes:
-      - atendemais-volume-dbdata:/var/lib/mysql
+      - your-volume-any-name:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=atendemais
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_USER=root
 volumes:
- atendemais-volume-dbdata:
+ your-volume-any-name:
   external: true 
 
